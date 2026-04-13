@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VERTICE — Contato</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/contato.css" />
+    <script src="../JS/inicio.js" defer></script>
+    <script src="../JS/contato.js"></script>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="../index.html" class="nav-logo">Vertice</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Página Principal</a></li>
+        <li><a href="Sobre.html">Sobre a Loja</a></li>
+        <li><a href="produtos.html">Produtos da Loja</a></li>
+        <li><a href="lancamentos.html">Novidades da Loja</a></li>
+        <li><a href="contato.html" class="active">Contato da Loja</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button aria-label="Buscar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button aria-label="Conta"><i class="fa-solid fa-user"></i></button>
+        <button aria-label="Sacola">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="contato-hero">
+      <div class="hero-bg-texto" aria-hidden="true">CONTATO</div>
+      <div class="contato-hero-inner">
+        <p class="hero-label">Fale com a gente</p>
+        <h1 class="hero-title">Entre em<br /><em>contato.</em></h1>
+      </div>
+    </div>
+
+    <div class="contato-body">
+      <div class="contato-info reveal">
+        <p class="info-intro">
+          Tem alguma dúvida, sugestão ou quer saber mais sobre nossas peças?
+          Nossa equipe está pronta para te atender.
+        </p>
+
+        <div class="info-bloco">
+          <div class="info-item">
+            <div class="info-item-icone">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="info-item-texto">
+              <span class="info-item-label">Endereço</span>
+              <span class="info-item-valor"
+                >Veiga de Almeida, 123<br />Rio de Janeiro — RJ</span
+              >
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-item-icone">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="info-item-texto">
+              <span class="info-item-label">Telefone</span>
+              <span class="info-item-valor">(21) 99999-0000</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-item-icone">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="info-item-texto">
+              <span class="info-item-label">E-mail</span>
+              <span class="info-item-valor">contato@vertice.com</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-item-icone">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="info-item-texto">
+              <span class="info-item-label">Horário de atendimento</span>
+              <span class="info-item-valor"
+                >Seg – Sex: 9h às 18h<br />Sáb: 10h às 14h</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="info-redes">
+          <p class="info-redes-titulo">Redes Sociais</p>
+          <div class="redes-lista">
+            <a href="#" class="rede-btn" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="rede-btn" aria-label="TikTok"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+            <a href="#" class="rede-btn" aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contato-form-wrap reveal">
+        <div class="form-header">
+          <p class="form-label-topo">Mensagem</p>
+          <h2 class="form-titulo">Manda um<br /><em>recado pra nós.</em></h2>
+        </div>
+
+        <div class="form-grid" id="form-contato">
+          <div class="form-grupo">
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              id="nome"
+              placeholder="Seu nome completo"
+              required
+            />
+          </div>
+
+          <div class="form-grupo">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="seu@email.com"
+              required
+            />
+          </div>
+
+          <div class="form-grupo">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" placeholder="(21) 00000-0000" />
+          </div>
+
+          <div class="form-grupo">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" required>
+              <option value="" disabled selected>Selecione um assunto</option>
+              <option value="pedido">Dúvida sobre pedido</option>
+              <option value="produto">Informações sobre produto</option>
+              <option value="troca">Troca e devolução</option>
+              <option value="parceria">Parceria / Colaboração</option>
+              <option value="imprensa">Imprensa</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="form-grupo full">
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              id="mensagem"
+              placeholder="Escreva sua mensagem aqui..."
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-submit">
+          <button
+            class="btn-enviar"
+            id="btn-enviar"
+            type="button"
+            onclick="enviarFormulario()"
+          >
+            <span>Enviar mensagem</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <p class="form-nota">Respondemos em até<br />1 dia útil.</p>
+        </div>
+
+        <div class="form-sucesso" id="form-sucesso">
+          <i class="fa-solid fa-circle-check"></i>
+          Mensagem enviada! Entraremos em contato em breve.
+        </div>
+      </div>
+    </div>
+
+    <div class="mapa-strip reveal">
+      <div class="mapa-texto">
+        <p>Nossa loja física</p>
+        <strong>Veiga de Almeida, 123 — Rio de Janeiro, RJ</strong>
+      </div>
+      <div class="mapa-horarios">
+        <div class="mapa-horario-item">
+          <span>Segunda a Sexta</span>
+          <strong>9h – 18h</strong>
+        </div>
+        <div class="mapa-horario-item">
+          <span>Sábado</span>
+          <strong>10h – 14h</strong>
+        </div>
+        <div class="mapa-horario-item">
+          <span>Domingo</span>
+          <strong>Fechado</strong>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="footer-top">
+        <div>
+          <p class="footer-brand">Vertice</p>
+          <p class="footer-desc">
+            Moda com identidade, criada para quem vive a cidade com
+            autenticidade e estilo próprio.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="TikTok"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+            <a href="#" aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-col-title">Navegação</p>
+          <ul class="footer-links">
+            <li><a href="../index.html">Página Principal</a></li>
+            <li><a href="Sobre.html">Sobre a Loja</a></li>
+            <li><a href="produtos.html">Produtos da Loja</a></li>
+            <li><a href="lancamentos.html">Novidades da Loja</a></li>
+            <li><a href="contato.html">Contato da Loja</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Informações</p>
+          <ul class="footer-links">
+            <li><a href="#">Política de Trocas</a></li>
+            <li><a href="#">Envio e Entrega</a></li>
+            <li><a href="#">Tamanhos e Medidas</a></li>
+            <li><a href="#">Pagamentos</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Contato</p>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Rua da Moda, 123<br />Rio de Janeiro — RJ</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>(21) 99999-0000</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contato@vertice.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 Vertice. Todos os direitos reservados.
+        </p>
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VERTICE</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="CSS/inicio.css" />
+    <script src="JS/inicio.js" defer></script>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="index.html" class="nav-logo">Vertice</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Página Principal</a></li>
+        <li><a href="HTML/Sobre.html">Sobre a Loja</a></li>
+        <li><a href="HTML/produtos.html">Produtos da Loja</a></li>
+        <li><a href="HTML/lancamentos.html">Novidades da Loja</a></li>
+        <li><a href="HTML/contato.html">Contato da Loja</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <button aria-label="Buscar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button aria-label="Conta"><i class="fa-solid fa-user"></i></button>
+        <button aria-label="Sacola">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="hero-label">Nova Coleção · 2026</p>
+        <h1 class="hero-title">Nova Era<br /><em>Street</em><br />Vertice.</h1>
+        <p class="hero-sub">
+          A autenticidade das ruas encontra a elegância atemporal. Peças que
+          definem quem você é, onde quer que esteja.
+        </p>
+        <a href="HTML/produtos.html" class="hero-cta">
+          <span>Explorar Coleção</span>
+          <svg viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="hero-scroll">
+        <div class="hero-scroll-line"></div>
+        <span>rolar</span>
+      </div>
+    </section>
+
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span class="marquee-item">Vertice<span>✦</span></span>
+        <span class="marquee-item">Nova Coleção 2026<span>✦</span></span>
+        <span class="marquee-item">Essenciais de Rua<span>✦</span></span>
+        <span class="marquee-item">Denim Retrô<span>✦</span></span>
+        <span class="marquee-item">Alfaiataria Moderna<span>✦</span></span>
+        <span class="marquee-item">Street<span>✦</span></span>
+        <span class="marquee-item">Vertice<span>✦</span></span>
+        <span class="marquee-item">Nova Coleção 2026<span>✦</span></span>
+        <span class="marquee-item">Essenciais de Rua<span>✦</span></span>
+        <span class="marquee-item">Denim Retrô<span>✦</span></span>
+        <span class="marquee-item">Alfaiataria Moderna<span>✦</span></span>
+        <span class="marquee-item">Street<span>✦</span></span>
+      </div>
+    </div>
+
+    <section class="featured reveal">
+      <div class="featured-header">
+        <div>
+          <p class="section-label">Seleção da semana</p>
+          <h2 class="section-title">Peças em <em>destaque</em></h2>
+        </div>
+        <a href="HTML/produtos.html" class="view-all">Ver todos os produtos</a>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-card-img-wrap">
+            <div
+              class="product-card-img"
+              style="
+                background-image: url(&quot;IMG/Moletom Nike x Vertice.png&quot;);
+              "
+            ></div>
+            <span class="product-badge">Colab</span>
+            <button class="product-wishlist" aria-label="Favoritar">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <div class="product-cta-wrap">
+              <button class="product-cta-btn">Adicionar à Sacola</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Vertice × Nike</p>
+            <h3 class="product-name">Moletom Oversized Nike x Vertice</h3>
+            <p class="product-price">R$ 179,90</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-img-wrap">
+            <div
+              class="product-card-img"
+              style="background-image: url(&quot;IMG/Camisa Vertice.png&quot;)"
+            ></div>
+            <span
+              class="product-badge"
+              style="background: var(--tan); color: var(--charcoal)"
+              >Novo</span
+            >
+            <button class="product-wishlist" aria-label="Favoritar">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <div class="product-cta-wrap">
+              <button class="product-cta-btn">Adicionar à Sacola</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Vertice Originals</p>
+            <h3 class="product-name">Camisa Minimalista Vertice</h3>
+            <p class="product-price">R$ 150,99</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-img-wrap">
+            <div
+              class="product-card-img"
+              style="background-image: url(&quot;IMG/Moletom Vertice.png&quot;)"
+            ></div>
+            <button class="product-wishlist" aria-label="Favoritar">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <div class="product-cta-wrap">
+              <button class="product-cta-btn">Adicionar à Sacola</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Vertice Originals</p>
+            <h3 class="product-name">Moletom Casual Vertice</h3>
+            <p class="product-price">R$ 179,90</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card-img-wrap">
+            <div
+              class="product-card-img"
+              style="background-image: url(&quot;IMG/Bermuda Vertice.png&quot;)"
+            ></div>
+            <span class="product-badge">Exclusivo</span>
+            <button class="product-wishlist" aria-label="Favoritar">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <div class="product-cta-wrap">
+              <button class="product-cta-btn">Adicionar à Sacola</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-brand">Vertice Street</p>
+            <h3 class="product-name">Bermuda Branca Street</h3>
+            <p class="product-price">R$ 189,90</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="editorial reveal">
+      <div class="editorial-visual">
+        <div class="editorial-img"></div>
+        <div class="editorial-accent"></div>
+      </div>
+      <div class="editorial-text">
+        <p class="section-label">Nossa história</p>
+        <h2 class="section-title">Moda que<br />conta <em>histórias</em></h2>
+        <p class="editorial-body">
+          Na Vertice, cada peça nasce da intersecção entre o que as ruas falam e
+          o que o tempo consagra. Não seguimos tendências — nós as criamos com
+          intenção, material e identidade.
+          <br /><br />
+          Nossa equipe percorre cidades, mercados e culturas para trazer o que
+          há de mais autêntico ao seu guarda-roupa.
+        </p>
+        <a href="HTML/Sobre.html" class="editorial-cta">
+          Conheça a Vertice
+          <svg viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <section class="novidades reveal">
+      <p class="section-label">Fique por dentro</p>
+      <h2 class="section-title">Novidades da <em>Loja</em></h2>
+
+      <div class="news-grid">
+        <article class="news-card">
+          <div class="news-card-img">
+            <div
+              class="news-card-img-inner"
+              style="background-image: url(&quot;IMG/Modelo Vertice.png&quot;)"
+            ></div>
+          </div>
+          <p class="news-tag">Tendências · Abr 2026</p>
+          <h3 class="news-title">Editorial: Modelo Exclusivo Vertice</h3>
+          <p class="news-excerpt">
+            Conheça o novo visual da coleção 2026 com o modelo destaque da
+            Vertice, trazendo atitude e autenticidade para as ruas.
+          </p>
+          <a href="HTML/lancamentos.html" class="news-link">Ler mais</a>
+        </article>
+
+        <article class="news-card">
+          <div class="news-card-img">
+            <div
+              class="news-card-img-inner"
+              style="background-image: url(&quot;IMG/Calca Vertice.png&quot;)"
+            ></div>
+          </div>
+          <p class="news-tag">Coleção · Mar 2026</p>
+          <h3 class="news-title">Calça Vertice: Essencial da Estação</h3>
+          <p class="news-excerpt">
+            A calça que une conforto e estilo, perfeita para compor looks
+            urbanos e modernos nesta temporada.
+          </p>
+          <a href="HTML/lancamentos.html" class="news-link">Ler mais</a>
+        </article>
+
+        <article class="news-card">
+          <div class="news-card-img">
+            <div
+              class="news-card-img-inner"
+              style="background-image: url(&quot;IMG/Bone Vertice.png&quot;)"
+            ></div>
+          </div>
+          <p class="news-tag">Estilo · Mar 2026</p>
+          <h3 class="news-title">Boné Vertice: Toque Final de Estilo</h3>
+          <p class="news-excerpt">
+            O boné que completa qualquer produção streetwear, trazendo
+            personalidade e autenticidade para o seu visual.
+          </p>
+          <a href="lancamentos.html" class="news-link">Ler mais</a>
+        </article>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="footer-top">
+        <div>
+          <p class="footer-brand">Vertice</p>
+          <p class="footer-desc">
+            Moda com identidade, criada para quem vive a cidade com
+            autenticidade e estilo próprio.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="TikTok"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+            <a href="#" aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Navegação</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Página Principal</a></li>
+            <li><a href="HTML/Sobre.html">Sobre a Loja</a></li>
+            <li><a href="HTML/produtos.html">Produtos da Loja</a></li>
+            <li><a href="HTML/lancamentos.html">Novidades da Loja</a></li>
+            <li><a href="HTML/contato.html">Contato da Loja</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Informações</p>
+          <ul class="footer-links">
+            <li><a href="#">Política de Trocas</a></li>
+            <li><a href="#">Envio e Entrega</a></li>
+            <li><a href="#">Tamanhos e Medidas</a></li>
+            <li><a href="#">Pagamentos</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Contato</p>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Veiga de Almeida, 123<br />Rio de Janeiro — RJ</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>(21) 99999-0000</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contato@vertice.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 Vertice. Todos os direitos reservados.
+        </p>
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VERTICE — Produtos da Loja</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/produtos.css" />
+    <script src="../JS/produtos.js" defer></script>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="../index.html" class="nav-logo">Vertice</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Página Principal</a></li>
+        <li><a href="Sobre.html">Sobre a Loja</a></li>
+        <li><a href="produtos.html" class="active">Produtos da Loja</a></li>
+        <li><a href="lancamentos.html">Novidades da Loja</a></li>
+        <li><a href="contato.html">Contato da Loja</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button aria-label="Conta"><i class="fa-solid fa-user"></i></button>
+        <button aria-label="Sacola" id="btn-sacola">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="sacola-badge" id="contador-sacola"></span>
+        </button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <div class="hero-label">Coleção 2026</div>
+        <h1>VERTICE<span>STREETWEAR</span></h1>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-temporada">Itens disponíveis</div>
+        <div class="hero-contador" id="hero-num">07<span>produtos</span></div>
+      </div>
+      <div class="hero-bg-texto" aria-hidden="true">VERTICE</div>
+    </section>
+
+    <div class="cabecalho-secao">
+      <div class="titulo-secao">Produtos <span>/ Loja</span></div>
+      <div class="contagem-secao">03 lançamentos</div>
+    </div>
+
+    <div class="controles">
+      <button class="btn-filtro ativo" onclick="setFiltro('todos', this)">
+        Todos
+      </button>
+      <button class="btn-filtro" onclick="setFiltro('camisa', this)">
+        Camisas
+      </button>
+      <button class="btn-filtro" onclick="setFiltro('Top', this)">Top</button>
+      <button class="btn-filtro" onclick="setFiltro('moletom', this)">
+        Moletom
+      </button>
+      <button class="btn-filtro" onclick="setFiltro('colab', this)">
+        Colabs
+      </button>
+      <button class="btn-filtro" onclick="setFiltro('bermuda', this)">
+        Bermudas
+      </button>
+      <button class="btn-filtro" onclick="setFiltro('boné', this)">
+        Bonés
+      </button>
+      <div class="controles-direita" id="label-contagem">07 itens</div>
+    </div>
+
+    <div class="grade-container">
+      <div class="grade-produtos" id="grade">
+        <div class="card" data-tipo="colab">
+          <div class="card-visual">
+            <img
+              src="../IMG/Moletom Nike x Vertice.png"
+              alt="Moletom Nike x Vertice"
+            />
+            <div class="card-sobreposicao">
+              <button
+                class="btn-comprar"
+                onclick="
+                  adicionarAoCarrinho(event, 1, 'Moletom Nike x Vertice')
+                "
+              >
+                Comprar
+              </button>
+            </div>
+            <div class="card-etiqueta colab">Colab</div>
+          </div>
+          <div class="card-info">
+            <div class="card-tipo">Colab</div>
+            <div class="card-nome">Moletom Nike x Vertice</div>
+            <div class="card-rodape">
+              <div class="card-preco">R$ 179,90</div>
+              <div class="card-cores">
+                <div class="quadrado" style="background: #666"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tipo="colab">
+          <div class="card-visual">
+            <img
+              src="../IMG/Calca Moletom Nike x Vertice.png"
+              alt="Calça Moletom Nike x Vertice"
+            />
+            <div class="card-sobreposicao">
+              <button
+                class="btn-comprar"
+                onclick="
+                  adicionarAoCarrinho(event, 2, 'Calça Moletom Nike x Vertice')
+                "
+              >
+                Comprar
+              </button>
+            </div>
+            <div class="card-etiqueta colab">Colab</div>
+          </div>
+          <div class="card-info">
+            <div class="card-tipo">Colab</div>
+            <div class="card-nome">Calça Moletom Nike x Vertice</div>
+            <div class="card-rodape">
+              <div class="card-preco">R$ 189,90</div>
+              <div class="card-cores">
+                <div class="quadrado" style="background: #c8b89a"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tipo="camisa">
+          <div class="card-visual">
+            <img src="../IMG/Camisa Vertice.png" alt="Camisa Vertice" />
+            <div class="card-sobreposicao">
+              <button
+                class="btn-comprar"
+                onclick="adicionarAoCarrinho(event, 3, 'Camisa Vertice')"
+              >
+                Comprar
+              </button>
+            </div>
+            <div class="card-etiqueta">Novo</div>
+          </div>
+          <div class="card-info">
+            <div class="card-tipo">Camisa</div>
+            <div class="card-nome">Camisa Vertice</div>
+            <div class="card-rodape">
+              <div class="card-preco">R$ 150,99</div>
+              <div class="card-cores">
+                <div class="quadrado" style="background: #1e2e38"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tipo="Top">
+          <div class="card-visual">
+            <img src="../IMG/Imagem Top.png" alt="Top Feminino" />
+            <div class="card-sobreposicao">
+              <button
+                class="btn-comprar"
+                onclick="adicionarAoCarrinho(event, 4, 'Top Feminino')"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-tipo">Top</div>
+            <div class="card-nome">Top Feminino</div>
+            <div class="card-rodape">
+              <div class="card-preco">R$ 249,90</div>
+              <div class="card-cores">
+                <div class="quadrado" style="background: #f2ede4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tipo="boné">
+          <div class="card-visual">
+            <img src="../IMG/Bone Vertice.png" alt="Boné Vertice" />
+            <div class="card-sobreposicao">
+              <button
+                class="btn-comprar"
+                onclick="adicionarAoCarrinho(event, 5, 'Boné Vertice')"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-tipo">Boné</div>
+            <div class="card-nome">Boné Vertice</div>
+            <div class="card-rodape">
+              <div class="card-preco">R$ 249,90</div>
+              <div class="card-cores">
+                <div class="quadrado" style="background: #1e2e38"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tipo="moletom">
+          <div class="card-visual">
+            <img src="../IMG/Moletom Vertice.png" alt="Moletom Vertice" />
+            <div class="card-sobreposicao">
+              <button
+                class="btn-comprar"
+                onclick="adicionarAoCarrinho(event, 6, 'Moletom Vertice')"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-tipo">Moletom</div>
+            <div class="card-nome">Moletom Vertice</div>
+            <div class="card-rodape">
+              <div class="card-preco">R$ 179,90</div>
+              <div class="card-cores">
+                <div class="quadrado" style="background: #7a8e96"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tipo="bermuda">
+          <div class="card-visual">
+            <img src="../IMG/Bermuda Vertice.png" alt="Bermuda Branca" />
+            <div class="card-sobreposicao">
+              <button
+                class="btn-comprar"
+                onclick="adicionarAoCarrinho(event, 7, 'Bermuda Branca')"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="card-tipo">Bermuda</div>
+            <div class="card-nome">Bermuda Branca</div>
+            <div class="card-rodape">
+              <div class="card-preco">R$ 189,90</div>
+              <div class="card-cores">
+                <div class="quadrado" style="background: #f2ede4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notificacao" id="notificacao">Item adicionado</div>
+
+    <footer id="footer">
+      <div class="footer-top">
+        <div>
+          <p class="footer-brand">Vertice</p>
+          <p class="footer-desc">
+            Moda com identidade, criada para quem vive a cidade com
+            autenticidade e estilo próprio.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="TikTok"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+            <a href="#" aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-col-title">Navegação</p>
+          <ul class="footer-links">
+            <li><a href="../index.html">Página Principal</a></li>
+            <li><a href="Sobre.html">Sobre a Loja</a></li>
+            <li><a href="produtos.html">Produtos da Loja</a></li>
+            <li><a href="lancamentos.html">Novidades da Loja</a></li>
+            <li><a href="contato.html">Contato da Loja</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Informações</p>
+          <ul class="footer-links">
+            <li><a href="#">Política de Trocas</a></li>
+            <li><a href="#">Envio e Entrega</a></li>
+            <li><a href="#">Tamanhos e Medidas</a></li>
+            <li><a href="#">Formas de Pagamento</a></li>
+            <li><a href="#">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Contato</p>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Veiga de Almeida, 123<br />Rio de Janeiro — RJ</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>(21) 99999-0000</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contato@vertice.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 Vertice. Todos os direitos reservados.
+        </p>
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VERTICE — Lançamentos</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/LANCAMENTOS.CSS" />
+    <script src="../JS/inicio.js" defer></script>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="../index.html" class="nav-logo">Vertice</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Página Principal</a></li>
+        <li><a href="Sobre.html">Sobre a Loja</a></li>
+        <li><a href="produtos.html">Produtos da Loja</a></li>
+        <li><a href="lancamentos.html" class="active">Novidades da Loja</a></li>
+        <li><a href="contato.html">Contato da Loja</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button aria-label="Conta"><i class="fa-solid fa-user"></i></button>
+        <button aria-label="Sacola" id="btn-sacola">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="sacola-badge" id="contador-sacola"></span>
+        </button>
+      </div>
+    </nav>
+
+    <section class="banner">
+      <div>
+        <div class="banner-label">Nova Coleção · 2026</div>
+        <h2>NOVIDADES<span>2026</span></h2>
+        <p class="banner-sub">
+          Venha conhecer nossa nova coleção anual. Peças pensadas para quem vive
+          o streetwear de verdade.
+        </p>
+      </div>
+      <div class="banner-direita">
+        <div class="banner-ano">03<span>novidades</span></div>
+      </div>
+      <div class="banner-bg" aria-hidden="true">VERTICE</div>
+    </section>
+
+    <div class="cabecalho-secao">
+      <div class="titulo-secao">Destaques <span>/ Drop</span></div>
+    </div>
+
+    <div class="grade-container reveal">
+      <div class="grade-cards">
+        <div class="card destaque" style="animation-delay: 0s">
+          <div class="card-img-wrap">
+            <img src="../IMG/Modelo Vertice.png" alt="Nova Coleção" />
+            <div class="card-sobreposicao">
+              <button
+                class="btn-sobreposicao"
+                onclick="window.location.href = 'produtos.html'"
+              >
+                Ver mais
+              </button>
+            </div>
+            <div class="card-etiqueta">Novo</div>
+          </div>
+          <div class="card-info">
+            <div class="card-categoria">Destaque da coleção</div>
+            <h3>Nova Coleção</h3>
+            <p>
+              Peças exclusivas com design autoral. Criadas para quem não segue
+              tendência — cria.
+            </p>
+            <button
+              class="btn-card"
+              onclick="window.location.href = 'produtos.html'"
+            >
+              Ver mais
+            </button>
+          </div>
+        </div>
+
+        <div class="card" style="animation-delay: 0.07s">
+          <div class="card-img-wrap">
+            <img src="../IMG/Tenis.png" alt="Promoções" />
+            <div class="card-sobreposicao">
+              <button
+                class="btn-sobreposicao"
+                onclick="window.location.href = 'produtos.html'"
+              >
+                Comprar
+              </button>
+            </div>
+            <div class="card-etiqueta quente">−50%</div>
+          </div>
+          <div class="card-info">
+            <div class="card-categoria">Ofertas</div>
+            <h3>Promoções</h3>
+            <p>Até 50% OFF em produtos selecionados. Por tempo limitado.</p>
+            <button
+              class="btn-card"
+              onclick="window.location.href = 'produtos.html'"
+            >
+              Comprar
+            </button>
+          </div>
+        </div>
+
+        <div class="card" style="animation-delay: 0.14s">
+          <div class="card-img-wrap">
+            <img src="../IMG/Calca Vertice.png" alt="Tendências" />
+            <div class="card-sobreposicao">
+              <button
+                class="btn-sobreposicao"
+                onclick="window.location.href = 'produtos.html'"
+              >
+                Explorar
+              </button>
+            </div>
+            <div class="card-etiqueta">Em alta</div>
+          </div>
+          <div class="card-info">
+            <div class="card-categoria">Tendências</div>
+            <h3>Tendências</h3>
+            <p>O que está dominando o streetwear agora. Fique à frente.</p>
+            <button
+              class="btn-card"
+              onclick="window.location.href = 'produtos.html'"
+            >
+              Explorar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="footer-top">
+        <div>
+          <p class="footer-brand">Vertice</p>
+          <p class="footer-desc">
+            Moda com identidade, criada para quem vive a cidade com
+            autenticidade e estilo próprio.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="TikTok"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+            <a href="#" aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-col-title">Navegação</p>
+          <ul class="footer-links">
+            <li><a href="../index.html">Página Principal</a></li>
+            <li><a href="Sobre.html">Sobre a Loja</a></li>
+            <li><a href="produtos.html">Produtos da Loja</a></li>
+            <li><a href="lancamentos.html">Novidades da Loja</a></li>
+            <li><a href="contato.html">Contato da Loja</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Informações</p>
+          <ul class="footer-links">
+            <li><a href="#">Política de Trocas</a></li>
+            <li><a href="#">Envio e Entrega</a></li>
+            <li><a href="#">Tamanhos e Medidas</a></li>
+            <li><a href="#">Formas de Pagamento</a></li>
+            <li><a href="#">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Contato</p>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Veiga de Almeida, 123<br />Rio de Janeiro — RJ</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>(21) 99999-0000</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contato@vertice.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 Vertice. Todos os direitos reservados.
+        </p>
+        <ul class="footer-bottom-links">
+          <li><a href="#">Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
