@@ -148,7 +148,7 @@ body {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-top: 72px; 
+  padding-top: 72px;
 }
 
 .hero-sobre::before {
@@ -803,10 +803,87 @@ body {
   }
 }
 
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 2px;
+  transition:
+    transform 0.35s ease,
+    opacity 0.25s ease,
+    background var(--transition);
+}
+
+#navbar.scrolled .nav-hamburger span {
+  background: var(--charcoal);
+}
+
+#navbar.menu-open .nav-hamburger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+#navbar.menu-open .nav-hamburger span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+#navbar.menu-open .nav-hamburger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 @media (max-width: 900px) {
-  .nav-links {
-    display: none;
+  .nav-hamburger {
+    display: flex;
   }
+
+  .nav-links {
+    position: fixed !important;
+    top: 72px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: var(--dark, #111c24) !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2.5rem !important;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s ease;
+    z-index: 999;
+  }
+
+  #navbar.menu-open .nav-links {
+    opacity: 1 !important;
+    pointer-events: all !important;
+    transform: translateY(0) !important;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem !important;
+    letter-spacing: 0.2em !important;
+    color: rgba(245, 240, 232, 0.85) !important;
+  }
+
+  .nav-links a.active,
+  .nav-links a:hover {
+    color: var(--teal) !important;
+  }
+
   .valores-strip {
     grid-template-columns: 1fr 1fr;
   }
@@ -822,5 +899,30 @@ body {
   }
   .footer-top {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-titulo {
+    font-size: 2.6rem;
+  }
+  .valores-strip {
+    grid-template-columns: 1fr;
+  }
+  .id-card {
+    padding: 2rem;
+  }
+  .cta-bar p {
+    font-size: 1.1rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
 }
