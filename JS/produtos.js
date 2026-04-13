@@ -1,47 +1,49 @@
-let carrinho = 0,
-  timerNotificacao;
+// variáveis 
+
+let carrinho = 0, timerNotificacao;
+
+// ativado ao clicar num botão de filtro
 
 function setFiltro(filtro, btn) {
-  document
-    .querySelectorAll(".btn-filtro")
-    .forEach((b) => b.classList.remove("ativo"));
-  btn?.classList.add("ativo");
+  document.querySelectorAll('.btn-filtro').forEach(b => b.classList.remove('ativo'));
+  btn?.classList.add('ativo');
 
-  const cards = document.querySelectorAll(".card");
-  let visiveis = 0;
-  cards.forEach((card) => {
-    const mostrar = filtro === "todos" || card.dataset.tipo === filtro;
-    card.style.display = mostrar ? "" : "none";
-    if (mostrar) visiveis++;
+  // mostra e esconde os cards pelo atributo data-tipo
+  document.querySelectorAll('.card').forEach(card => {
+    card.style.display = (filtro === 'todos' || card.dataset.tipo === filtro) ? '' : 'none';
   });
-
-  const label = document.getElementById("label-contagem");
-  if (label)
-    label.textContent = `${visiveis} ${visiveis === 1 ? "item" : "itens"}`;
 }
 
+// ativado ao clicar em "Comprar"
+
 function adicionarAoCarrinho(e, id, nome) {
-  const badge = document.getElementById("contador-sacola");
-  if (badge) {
-    badge.textContent = ++carrinho;
-    badge.classList.add("visivel");
-  }
+  const badge = document.getElementById('contador-sacola');
+  badge.textContent = ++carrinho;
+  badge.classList.add('visivel');
   exibirNotificacao(`Adicionado: ${nome}`);
 }
 
+// exibe a notificação
+
 function exibirNotificacao(msg) {
-  const n = document.getElementById("notificacao");
-  if (!n) return;
-  n.textContent = msg;
-  n.classList.add("visivel");
+  const notificacao = document.getElementById('notificacao');
+  notificacao.textContent = msg;
+  notificacao.classList.add('visivel');
   clearTimeout(timerNotificacao);
-  timerNotificacao = setTimeout(() => n.classList.remove("visivel"), 3000);
+  timerNotificacao = setTimeout(() => notificacao.classList.remove('visivel'), 3000);
 }
 
-window.addEventListener("scroll", () => {
-  const navbar = document.getElementById("navbar");
-  if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 40);
+// aguarda a página carregar
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // muda a aparência do navbar ao rolar a página
+  window.addEventListener('scroll', () =>
+    document.getElementById('navbar').classList.toggle('rolado', scrollY > 60)
+  );
 });
+
+// anima os cards ao aparecerem na tela
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -52,9 +54,8 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.12 },
+  { threshold: 0.12 }
 );
 
-document
-  .querySelectorAll(".reveal")
+document.querySelectorAll(".reveal")
   .forEach((el) => revealObserver.observe(el));
