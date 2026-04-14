@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // muda a aparência do navbar ao rolar a página
   window.addEventListener('scroll', () =>
-    document.getElementById('navbar').classList.toggle('rolado', scrollY > 60)
+    document.getElementById('navbar').classList.toggle('scrolled', scrollY > 60)
   );
 });
 
