@@ -191,6 +191,11 @@ body {
   letter-spacing: -8px;
 }
 
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .banner-label {
   font-size: 0.6rem;
   letter-spacing: 0.3em;
@@ -202,6 +207,8 @@ body {
   gap: 1rem;
   position: relative;
   z-index: 1;
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
 }
 
 .banner-label::before {
@@ -221,6 +228,8 @@ body {
   color: #fff;
   position: relative;
   z-index: 1;
+  opacity: 0;
+  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.38s forwards;
 }
 
 .banner h2 span {
@@ -238,12 +247,16 @@ body {
   line-height: 1.9;
   position: relative;
   z-index: 1;
+  opacity: 0;
+  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.55s forwards;
 }
 
 .banner-direita {
   text-align: right;
   position: relative;
   z-index: 1;
+  opacity: 0;
+  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.55s forwards;
 }
 
 .banner-ano {
@@ -271,6 +284,8 @@ body {
   justify-content: space-between;
   padding: 2rem 6%;
   border-bottom: 1px solid var(--border-solid);
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
 }
 
 .titulo-secao {
